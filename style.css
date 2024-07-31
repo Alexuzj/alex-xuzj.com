@@ -79,15 +79,14 @@ body {
 }
 
 .section h2 {
-    font-family: 'Indie Flower';
+    font-family: 'Indie Flower', cursive;
     font-size: 18px;
 }
 
 .section h2 a {
     color: black;
     text-decoration: none; /* 去掉下划线 */
-    font-weight: bolder;
-
+    font-weight: bold; /* 设置字体加粗 */
 }
 
 .section h2 a:hover {
