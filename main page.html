@@ -22,67 +22,43 @@
             <div class="title">
                 <h1><span class="font-intro">Hi, I'm Alex. I'm an urban designer, design strategist<br>and photographer.</span></h1>
             </div>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="img1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="img2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="img3.jpg" style="width:100%">
-                </div>
-                <!-- Add more slides as needed -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <div class="dots" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
             <div class="content">
-                <h4>
-                    <p>My curiosity drives me to dissect and understand urban challenges, transforming them into innovative solutions. This inquisitive spirit fuels my journey in urban design, where each project enhances my approach and ensures success.<br>
-                        <br>
-                        A key focus of my work is urban strategy development. I am intrigued by the interplay of design and system strategies, and how they foster sustainable, equitable communities. Understanding people and their needs is central to my approach, enabling me to create compelling narratives and visuals that drive impactful urban development.
-                        <br><br>
-                        Reach out to me at alex.xuzj@gmail.com or LinkedIn.
-                    </p>
-                </h4>
+                <h4><p>My curiosity drives me to dissect and understand urban challenges, transforming them into innovative solutions. This inquisitive spirit fuels my journey in urban design, where each project enhances my approach and ensures success.<br>
+                    <br>
+                    A key focus of my work is urban strategy development. I am intrigued by the interplay of design and system strategies, and how they foster sustainable, equitable communities. Understanding people and their needs is central to my approach, enabling me to create compelling narratives and visuals that drive impactful urban development.
+                    <br><br>
+                    Reach out to me at alex.xuzj@gmail.com or LinkedIn.</p></h4>
             </div>
+
+            <div class="section">
+                <h2><a href="projects.html">My Design Work</a></h2>
+                <div class="gallery">
+                    <img src="design1.jpg" alt="Design 1">
+                    <img src="design2.jpg" alt="Design 2">
+                    <img src="design3.jpg" alt="Design 3">
+                    <img src="design4.jpg" alt="Design 4">
+                    <img src="design5.jpg" alt="Design 5">
+                    <img src="design6.jpg" alt="Design 6">
+                    <img src="design7.jpg" alt="Design 7">
+                    <img src="design8.jpg" alt="Design 8">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><a href="photograph.html">Photograph</a></h2>
+                <div class="gallery">
+                    <img src="photo1.jpg" alt="Photo 1">
+                    <img src="photo2.jpg" alt="Photo 2">
+                    <img src="photo3.jpg" alt="Photo 3">
+                    <img src="photo4.jpg" alt="Photo 4">
+                    <img src="photo5.jpg" alt="Photo 5">
+                    <img src="photo6.jpg" alt="Photo 6">
+                    <img src="photo7.jpg" alt="Photo 7">
+                    <img src="photo8.jpg" alt="Photo 8">
+                </div>
+            </div>
+
         </div>
     </div>
-    <br>
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (slideIndex >= slides.length) { slideIndex = 0 }
-            if (slideIndex < 0) { slideIndex = slides.length - 1 }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex].style.display = "block";
-            dots[slideIndex].className += " active";
-            slideIndex++;
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
 </body>
 </html>
