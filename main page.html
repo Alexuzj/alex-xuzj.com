@@ -5,10 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Xu's Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Alex Xu's Personal Website</h1>
-    <p>This is a simple webpage hosted on GitHub Pages.</p>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html" class="active"><span class="font-alex">Alex</span> <span class="font-xuzj">Xuzj</span></a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="title">
+                <h1><span class="font-intro">Hi, I'm Alex. I'm an urban designer, design strategist<br>and photographer.</span></h1>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="img1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="img2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="img3.jpg" style="width:100%">
+                </div>
+                <!-- Add more slides as needed -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dots" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="content">
+                <h4>
+                    <p>My curiosity drives me to dissect and understand urban challenges, transforming them into innovative solutions. This inquisitive spirit fuels my journey in urban design, where each project enhances my approach and ensures success.<br>
+                        <br>
+                        A key focus of my work is urban strategy development. I am intrigued by the interplay of design and system strategies, and how they foster sustainable, equitable communities. Understanding people and their needs is central to my approach, enabling me to create compelling narratives and visuals that drive impactful urban development.
+                        <br><br>
+                        Reach out to me at alex.xuzj@gmail.com or LinkedIn.
+                    </p>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (slideIndex >= slides.length) { slideIndex = 0 }
+            if (slideIndex < 0) { slideIndex = slides.length - 1 }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+            slideIndex++;
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
 </body>
 </html>
-
