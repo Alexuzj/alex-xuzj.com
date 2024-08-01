@@ -12,7 +12,7 @@ body {
     font-family: "Indie Flower", cursive;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 .cabin-unique {
     font-family: "Cabin", sans-serif;
@@ -162,7 +162,14 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 10px; /* 添加图片之间的间隙 */
-    animation: scroll 20s linear infinite;
+    animation: scroll infinite linear;
+    animation-duration: calc(0.2s * var(--image-count) * 2); /* 动态计算动画时长 */
+}
+
+.inner-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .column img {
@@ -210,9 +217,9 @@ h4 {
 
 @keyframes scroll {
     0% {
-        transform: translateY(100%);
+        transform: translateY(0%);
     }
     100% {
-        transform: translateY(-100%);
+        transform: translateY(-50%); /* 确保整个内容可以完整展示 */
     }
 }
