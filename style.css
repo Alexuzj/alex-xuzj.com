@@ -1,3 +1,4 @@
+/* 通用样式 */
 body {
     margin: 0;
     padding: 0;
@@ -59,8 +60,9 @@ body {
     font-weight: bold;
 }
 
-.main-content {
-    width: 92%;
+/* mainpage 特定样式 */
+.mainpage-container .main-content {
+    width: 88%;
     padding: 30px;
 }
 
@@ -138,56 +140,8 @@ h4 {
     font-size: 14px;
 }
 
-
-
-Photography:
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: white;
-    color: black;
-}
-
-.container {
-    display: flex;
-    height: 100vh;
-}
-
-.sidebar {
-    width: 12%;
-    background-color: #ffffff;
-    padding: 20px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #7c7b7b;
-    font-weight: normal;
-    font-size: 16px;
-    font-family: 'Cabin', sans-serif;
-    transition: color 0.3s, font-weight 0.3s;
-}
-
-.sidebar ul li a:hover {
-    color: rgb(184, 26, 26);
-}
-
-.sidebar ul li a.active {
-    color: black;
-    font-weight: bold;
-}
-
-.main-content {
+/* photography 特定样式 */
+.photography-container .main-content {
     width: 88%;
     display: flex;
     justify-content: center;
