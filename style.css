@@ -163,7 +163,7 @@ h4 {
     flex-direction: column;
     gap: 10px; /* 添加图片之间的间隙 */
     animation: scroll infinite linear;
-    animation-duration: calc(0.2s * var(--image-count) * 2); /* 动态计算动画时长 */
+    animation-duration: calc(1s * var(--image-count) * 2); /* 动态计算动画时长 */
 }
 
 .inner-column {
@@ -220,6 +220,6 @@ h4 {
         transform: translateY(0%);
     }
     100% {
-        transform: translateY(-50%); /* 确保整个内容可以完整展示 */
+        transform: translateY(-300%); /* 确保整个内容可以完整展示 */
     }
 }
