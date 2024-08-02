@@ -1,0 +1,62 @@
+/* Projects page styles */
+.main-content {
+    display: flex;
+    width: 88%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.project-list {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.project-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list ul li {
+    margin: 15px 0;
+    font-size: 16px;
+    transition: font-size 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.project-list ul li:hover {
+    font-size: 20px;
+    color: red;
+}
+
+.project-image {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 20%;
+    }
+
+    .main-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}

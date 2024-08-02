@@ -60,6 +60,52 @@ body {
     font-weight: bold;
 }
 
+
+/* Projects page styles */
+.projects-page .main-content {
+    display: flex;
+    width: 88%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.projects-page .project-list {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.project-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects-page .project-list ul li {
+    margin: 15px 0;
+    font-size: 16px;
+    transition: font-size 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.projects-page .project-list ul li:hover {
+    font-size: 20px;
+    color: red;
+}
+
+.projects-page .project-image {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-page .project-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    display: none; /* 初始隐藏 */
+}
+
+
 /* mainpage 特定样式 */
 .mainpage-container .main-content {
     width: 88%;
@@ -178,6 +224,82 @@ h4 {
     object-fit: cover;
 }
 
+
+/* Journey Image Style */
+.journey-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.journey-image {
+    width: 100%; /* 放大图片宽度 */
+    height: auto;
+    max-width: 1200px; /* 调整最大宽度 */
+    object-fit: cover;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 aspect ratio */
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* 默认设置为不可见 */
+    transition: opacity 0s ease; /* 移除渐变效果 */
+}
+
+.slideshow img:first-child {
+    opacity: 1; /* 第一张图片初始可见 */
+}
+
+@keyframes slide {
+    0% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    33.34% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.slideshow img:nth-child(1) {
+    animation: slide 15s infinite;
+}
+
+.slideshow img:nth-child(2) {
+    animation: slide 15s infinite 5s;
+}
+
+.slideshow img:nth-child(3) {
+    animation: slide 15s infinite 10s;
+}
+
 /* 适配不同屏幕大小 */
 @media (max-width: 768px) {
     .sidebar {
@@ -188,12 +310,17 @@ h4 {
         width: 80%;
     }
 
-    .scrolling-gallery {
-        gap: 10px;
+    .project-list ul li {
+        font-size: 14px;
     }
 
-    .column img {
-        width: 100%;
+    .project-list ul li:hover {
+        font-size: 18px;
+    }
+
+    .slideshow-container {
+        grid-template-columns: 1fr;
+        width: 80%; /* 在小屏幕上缩小幻灯片容器宽度 */
     }
 }
 
@@ -206,12 +333,17 @@ h4 {
         width: 70%;
     }
 
-    .scrolling-gallery {
-        gap: 5px;
+    .project-list ul li {
+        font-size: 12px;
     }
 
-    .column img {
-        width: 100%;
+    .project-list ul li:hover {
+        font-size: 16px;
+    }
+
+    .slideshow-container {
+        grid-template-columns: 1fr;
+        width: 100%; /* 在小屏幕上使用全宽 */
     }
 }
 
@@ -223,4 +355,3 @@ h4 {
         transform: translateY(-300%); /* 确保整个内容可以完整展示 */
     }
 }
-
