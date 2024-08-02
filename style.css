@@ -46,7 +46,7 @@ body {
     text-decoration: none;
     color: #7c7b7b;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Cabin', sans-serif;
     transition: color 0.3s, font-weight 0.3s;
 }
@@ -124,13 +124,13 @@ p {
 
 .font-alex {
     font-family: 'Indie Flower', cursive;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .font-xuzj {
     font-family: 'Cabin', sans-serif;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 h4 {
@@ -223,3 +223,4 @@ h4 {
         transform: translateY(-300%); /* 确保整个内容可以完整展示 */
     }
 }
+
