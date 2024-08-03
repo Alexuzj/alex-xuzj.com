@@ -30,7 +30,7 @@ body {
 .sidebar {
     width: 12%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px;
 }
 
 .sidebar ul {
@@ -39,14 +39,14 @@ body {
 }
 
 .sidebar ul li {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .sidebar ul li a {
     text-decoration: none;
     color: #7c7b7b;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Cabin', sans-serif;
     transition: color 0.3s, font-weight 0.3s;
 }
@@ -60,10 +60,32 @@ body {
     font-weight: bold;
 }
 
+.submenu {
+    display: none;
+    list-style: none; /* 移除项目符号 */
+    font-size: 12px;
+    font-family: 'Cabin', sans-serif;
+    padding-left: 20px; /* 略微缩进以区分主标题和副标题 */
+}
+
+.submenu li a {
+    font-size: 12px; /* 设置子菜单链接的字体大小 */
+    color: #333; /* 设置子菜单链接的字体颜色，可以根据需要调整 */
+    padding: 5px 10px; /* 增加一些内边距以提高点击区域和视觉效果 */
+    display: block; /* 使链接占据整个列表项区域，增加易用性 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.submenu li a:hover {
+    background-color: #f8f8f8; /* 鼠标悬停时的背景颜色 */
+    color: #000; /* 鼠标悬停时的字体颜色 */
+}
+
+
 /* mainpage 特定样式 */
 .mainpage-container .main-content {
-    width: 88%;
-    padding: 30px;
+    width: 80%;
+    padding: 15px;
 }
 
 .title {
@@ -72,12 +94,12 @@ body {
 }
 
 .content {
-    max-width: 600px;
+    max-width: 900px;
     margin-left: 0;
 }
 
 .section {
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .section h2 {
@@ -305,14 +327,6 @@ h4 {
     display: none; /* 初始隐藏 */
 }
 
-.submenu {
-    display: none;
-    list-style: none; /* 移除项目符号 */
-    font-size: 14px;
-    font-family: 'Cabin', sans-serif;
-    padding-left: 20px; /* 略微缩进以区分主标题和副标题 */
-}
-
 .menu-item a.menu-toggle {
     cursor: pointer; /* 提示用户这是一个可点击的项 */
 }
@@ -320,6 +334,18 @@ h4 {
 .menu-item a:hover {
     color: black;
     font-weight: bold;
+}
+
+.image-gallery img {
+    width: 30%; /* 每张图片占父容器的30%宽度 */
+    height: auto; /* 高度自动调整，保持比例 */
+    border: 1px solid #ccc;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    padding-left: 5px;
+    user-select: none; /* 防止文本被选中 */
 }
 
 /* 适配不同屏幕大小 */

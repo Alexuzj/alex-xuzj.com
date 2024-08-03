@@ -6,6 +6,21 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        /* 添加样式以控制图片的布局 */
+        .image-gallery {
+            display: flex;
+            flex-direction: row; /* 图片横向排列 */
+            justify-content: center; /* 居中显示图片 */
+            gap: 10px; /* 图片之间的间距 */
+            margin-top: 20px; /* 与上方内容的间距 */
+        }
+        .image-gallery img {
+            max-width: 100%; /* 确保图片宽度不超过容器 */
+            height: auto;
+            border: 1px solid #ccc; /* 图片边框 */
+        }
+    </style>
 </head>
 <body>
     <div class="container mainpage-container">
@@ -13,17 +28,17 @@
             <ul>
                 <li><a href="main page.html"><span class="font-alex">Alex</span> <span class="font-xuzj">Xuzj</span></a></li>
                 <li class="menu-item">
-                    <a href="projects.html" class="menu-toggle">Projects</a>
+                    <a href="projects.html">Projects</a> <!-- 单独的链接用于返回projects.html -->
+                    <span class="menu-toggle">+</span> <!-- 用于展开子菜单的元素 -->
                     <ul class="submenu" style="display: none;">
-                        <li><a href="#project1">Architecture Design</a></li>
-                        <li><a href="#project2">Urban Design</a></li>
-                        <li><a href="#project3">Design Strategy</a></li>
-                        <li><a href="#project4">Hand-Sketch</a></li>
+                        <li><a href="architecture.htm">Architecture Design</a></li>
+                        <li><a href="urbandesign.htm">Urban Design</a></li>
+                        <li><a href="designstrategy.htm">Design Strategy</a></li>
+                        <li><a href="handsketch.html">Hand-Sketch</a></li>
                     </ul>
                 </li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="main-content">
@@ -32,8 +47,13 @@
             </div>
             <div class="content">
                 <h4>
-                    <p>When I was curled up in my bed in a southern Chinese city, watching Woody Allen's <em>Manhattan</em>, I never imagined that I would one day find myself in New York, deeply intertwined with this city's vibrant fabric.<br><br>In China, I studied <strong>Urban and Rural Planning</strong> at <strong>Beijing Normal University Zhuhai</strong>. In the beautiful coastal city of Zhuhai, I embarked on my design journey and began pondering the intricate relationship between planning, architecture, and the urban landscape.<br><br> In 2023, I ventured to <strong>Cornell's AAPNYC</strong> to pursue a <strong>Master of Science in Advanced Urban Design (M.S.AUD)</strong>. Under the guidance of many brilliant scholars and peers, I started focusing on stakeholder engagement, community coordination, and how urban economics and politics shape design strategies that impact people's lives.<br><br>Outside the realm of design, my interests are delightfully diverse. I proudly consider myself a Japanese whiskey connoisseur, and my Google Maps is packed with over 100 recommended restaurants and bars in New York City! I have a passion for jazz, R&B, and classic films—these artistic worlds enrich my daily life. In my free time, I love planning dinner parties with friends and enjoying outdoor activities.<br><br><br>Reach out to me at <a href="mailto:alex.xuzj@gmail.com">alex.xuzj@gmail.com</a> or LinkedIn.<br>Feel free to download my <a href="Resume.pdf" target="_blank">resume</a>.</p>
+                    <p>When I was curled up in my bed in a southern Chinese city, watching Woody Allen's <em>Manhattan</em>, I never imagined that I would one day find myself in New York, deeply intertwined with this city's vibrant fabric.<br><br>In China, I studied <strong>Urban and Rural Planning</strong> at <strong>Beijing Normal University Zhuhai</strong>. In the beautiful coastal city of Zhuhai, I embarked on my design journey and began pondering the intricate relationship between planning, architecture, and the urban landscape.<br><br> In 2023, I ventured to <strong>Cornell's AAPNYC</strong> to pursue a <strong>Master of Science in Advanced Urban Design (M.S.AUD)</strong>. Under the guidance of many brilliant scholars and peers, I started focusing on stakeholder engagement, community coordination, and how urban economics and politics shape design strategies that impact people's lives.<br><br>Outside the realm of design, my interests are delightfully diverse. I proudly consider myself a Japanese whiskey connoisseur, and my Google Maps is packed with over 100 recommended restaurants and bars in New York City! I have a passion for jazz, R&B, and classic films—these artistic worlds enrich my daily life. In my free time, I love planning dinner parties with friends and enjoying outdoor activities.<br><br><br>Reach out to me at <a href="mailto:alex.xuzj@gmail.com">alex.xuzj@gmail.com</a> or LinkedIn.<br>Feel free to download my <a href="resume.pdf" target="_blank">resume</a>.</p>
                 </h4>
+                <div class="image-gallery">
+                    <img src="me\1.jpg" alt="Image 1">
+                    <img src="me\2.jpg" alt="Image 2">
+                    <img src="me\3.jpg" alt="Image 3">
+                </div>
             </div>
         </div>
     </div>

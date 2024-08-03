@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', function(event) {
-        event.preventDefault();  // 阻止链接的默认跳转行为
-        const submenu = this.nextElementSibling;
-        if (submenu.style.display === "none" || !submenu.style.display) {
-            submenu.style.display = "block";
-        } else {
-            submenu.style.display = "none";
-        }
+    var toggle = document.querySelector('.menu-toggle');
+    var submenu = document.querySelector('.submenu');
+
+    toggle.addEventListener('click', function(event) {
+        event.preventDefault(); // 防止页面滚动或其他默认动作
+        var displayStyle = submenu.style.display;
+        submenu.style.display = displayStyle === 'block' ? 'none' : 'block';
     });
 });
 
@@ -23,3 +21,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
