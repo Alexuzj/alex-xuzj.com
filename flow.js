@@ -34,21 +34,3 @@ document.addEventListener("DOMContentLoaded", function() {
         column.scrollTop = column.scrollHeight;
     });
 });
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const projectNames = document.querySelectorAll('#project-names li');
-    const projectDisplay = document.getElementById('project-display');
-
-    projectNames.forEach(function(project) {
-        project.addEventListener('mouseover', function() {
-            const imageSrc = this.getAttribute('data-image');
-            projectDisplay.src = imageSrc;
-            projectDisplay.style.display = 'block';
-        });
-
-        project.addEventListener('mouseout', function() {
-            projectDisplay.style.display = 'none';
-        });
-    });
-});

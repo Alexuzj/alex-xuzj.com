@@ -60,52 +60,6 @@ body {
     font-weight: bold;
 }
 
-
-/* Projects page styles */
-.projects-page .main-content {
-    display: flex;
-    width: 88%;
-    padding: 30px;
-    overflow-y: auto;
-}
-
-.projects-page .project-list {
-    width: 30%;
-    margin-right: 20px;
-}
-
-.project-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.projects-page .project-list ul li {
-    margin: 15px 0;
-    font-size: 16px;
-    transition: font-size 0.3s, color 0.3s;
-    cursor: pointer;
-}
-
-.projects-page .project-list ul li:hover {
-    font-size: 20px;
-    color: red;
-}
-
-.projects-page .project-image {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.projects-page .project-image img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    display: none; /* 初始隐藏 */
-}
-
-
 /* mainpage 特定样式 */
 .mainpage-container .main-content {
     width: 88%;
@@ -298,6 +252,74 @@ h4 {
 
 .slideshow img:nth-child(3) {
     animation: slide 15s infinite 10s;
+}
+
+/* Projects page styles */
+.content-area {
+    display: flex;
+    justify-content: space-between;  /* 项目名称和图片区域分开 */
+    align-items: start;  /* 对齐到顶部 */
+    width: 100%;  /* 宽度根据需要调整 */
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.project-list {
+    width: 100%;
+    margin-right: 16px;
+    margin-top: 60px
+}
+
+.project-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list ul li {
+    font-family: 'Indie Flower';  /* 设置特定字体 */
+    color: #808080;  /* 初始为灰色 */
+    margin: 10px 0;
+    font-size: 20px;
+    transition: font-size 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.project-list ul li:hover {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+
+.project-image {
+    width: 60%;  /* 图片区域宽度，保证总宽度不超过100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;  /* 增加顶部外边距，根据需要调整 */
+    margin-left: -1000px;  /* 左边外边距为负值，向左移动图片，根据需要调整 */
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    display: none; /* 初始隐藏 */
+}
+
+.submenu {
+    display: none;
+    list-style: none; /* 移除项目符号 */
+    font-size: 14px;
+    font-family: 'Cabin', sans-serif;
+    padding-left: 20px; /* 略微缩进以区分主标题和副标题 */
+}
+
+.menu-item a.menu-toggle {
+    cursor: pointer; /* 提示用户这是一个可点击的项 */
+}
+
+.menu-item a:hover {
+    color: black;
+    font-weight: bold;
 }
 
 /* 适配不同屏幕大小 */
