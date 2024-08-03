@@ -208,7 +208,7 @@ h4 {
 }
 
 .journey-image {
-    width: 100%; /* 放大图片宽度 */
+    width: 130%; /* 放大图片宽度 */
     height: auto;
     max-width: 1200px; /* 调整最大宽度 */
     object-fit: cover;
@@ -221,6 +221,7 @@ h4 {
     gap: 20px;
     margin-top: 20px;
     margin-bottom: 40px;
+    padding-bottom: 35px; /* 增加底部的空白 */
     width: 60%;
     margin-left: auto;
     margin-right: auto;
