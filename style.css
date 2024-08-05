@@ -246,16 +246,17 @@ h4 {
     padding: 0;
 }
 
-.project-list ul li {
+.project-list ul li a {
     font-family: 'Bebas Neue';  /* 设置特定字体 */
     color: #808080;  /* 初始为灰色 */
+    text-decoration: none;  /* 去除下划线 */
     margin: 10px 0;
     font-size: 20px;
     transition: font-size 0.3s, color 0.3s;
     cursor: pointer;
 }
 
-.project-list ul li:hover {
+.project-list ul li a:hover {
     font-size: 22px;
     color: rgb(0, 0, 0);
 }

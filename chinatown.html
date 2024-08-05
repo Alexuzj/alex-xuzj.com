@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Stand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@200;400;800&display=swap" rel="stylesheet">
+
+    <style>
+.center-content {
+    margin-top: -200px; /* 减少顶部边距以靠近上方的图片，根据实际需要调整这个值 */
+    text-align: center; /* 确保内容居中 */
+    width: 50%; /* 确保占满可用宽度 */
+}
+
+.slideshow-container {
+    position: relative;
+    margin: 100px;
+    margin-bottom: -130px;
+    height: 800px; /* 维持高度为 800px */
+    width: 80%; /* 调整宽度为视窗的 80% */
+}
+
+.slideshow-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out; /* 平滑过渡效果 */
+}
+
+.slideshow-image {
+    width: 100%; /* 图片宽度占满幻灯片 */
+    height: 100%; /* 图片高度占满幻灯片 */
+    object-fit: contain; /* 图片尽量填充容器但不裁剪 */
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+/* 字体样式调整 */
+h1 {
+    font-family: 'Cabin', sans-serif; /* 使用 Cabin 字体系列 */
+    font-weight: 800; /* 最粗字重 */
+    font-size: 30px; /* 调整为 36px, 或根据需要调整大小 */
+    text-align: center; /* 文本居中显示 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+
+h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400; /* 中等字重 */
+    font-size: 20px; /* 调整为 28px, 或根据需要调整大小 */
+    text-align: center;
+    margin: 15px 0;
+}
+
+p {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 200; /* 较细字重 */
+    font-size: 15px; /* 调整为 18px, 或根据需要调整大小 */
+    text-align: justify; /* 两端对齐 */
+    margin: 10px 0;
+}
+
+/* 基础样式 */
+h1, h2, p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 屏幕宽度小于 768px 时 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* 较小屏幕上降低字体大小 */
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* 屏幕宽度小于 480px 时 */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* 更小屏幕上进一步降低字体大小 */
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body id="chinatown">
+    <div class="container">
+        <nav class="sidebar">
+            <!-- Sidebar remains unchanged -->
+            <ul>
+                <li><a href="index.html"><span class="font-alex">Alex</span> <span class="font-xuzj">Xuzj</span></a></li>
+                <li class="menu-item">
+                    <a href="projects.html">Projects</a> <!-- Link to return to projects.html -->
+                    <span class="menu-toggle">+</span> <!-- Element to expand the submenu -->
+                    <ul class="submenu" style="display: none;">
+                        <li><a href="architecture.html">Architecture Design</a></li>
+                        <li><a href="urbandesign.html">Urban Design</a></li>
+                        <li><a href="designstrategy.html">Design Strategy</a></li>
+                        <li><a href="handsketch.html">Hand-Sketch</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="photography.html">Photography</a>
+                    <a href="https://www.instagram.com/alex_xuzj/" target="_blank">
+                        <img src="logo/ig.png" alt="Instagram" class="icon">
+                    </a>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="center-content">
+            <div class="slideshow-container">
+                <div class="slideshow-slide"><img src="1-Chinatown\01.jpg" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\02.jpg" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\03.jpg" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\04.jpg" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\05.jpg" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\06.jpg" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\07.png" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\08.png" class="slideshow-image"></div>
+                <div class="slideshow-slide"><img src="1-Chinatown\09.jpg" class="slideshow-image"></div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <header>
+                <h1>New York City_ Newspaper Stand, a vanishing landmark</h1>
+            </header>
+            <article>
+                <h2>Observing, documenting, extending infrastructural rituals (Chinatown & lower Lower East Side)</h2>
+                <p>When walking through the city, do we notice the infrastructure that shapes our daily lives? Newsstands were once essential to New York City's streetscape, serving as vital hubs for news and connection. These kiosks provided economic opportunities for vulnerable populations and became beloved fixtures of urban life, symbolizing the city's evolving infrastructure and history.<br>Today, however, newsstands are at risk of disappearing. Owners and employees, who have spent decades in the industry, face limited options for other employment. In 2007, unique, historic newsstands began to be replaced by uniform steel and glass structures from the CEMUSA company of Spain, displacing over 200 private businesses. This change, part of Mayor Michael Bloomberg’s street furniture initiative, sparked debate over the loss of historical elements that define New York's streetscape. Urgent policy changes are needed to help these small businesses survive and preserve their historical significance. The city must balance modernization with preserving its urban history to ensure newsstands remain part of its cultural and economic fabric.</p>
+            </article>
+            <footer>
+                <p>Alex_xuzj</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slideshow-slide");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
