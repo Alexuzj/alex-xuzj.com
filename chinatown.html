@@ -10,19 +10,18 @@
 
     <style>
 .center-content {
-    margin-top: -200px; /* 减少顶部边距以靠近上方的图片，根据实际需要调整这个值 */
+    margin-top: -100px; /* 减少顶部边距以靠近上方的图片，根据实际需要调整这个值 */
     text-align: center; /* 确保内容居中 */
-    width: 50%; /* 确保占满可用宽度 */
+    width: 55%; /* 确保占满可用宽度 */
 }
 
 .slideshow-container {
     position: relative;
-    margin: 100px;
-    margin-bottom: -130px;
+    margin:65px;
+    margin-bottom: -100px;
     height: 800px; /* 维持高度为 800px */
-    width: 80%; /* 调整宽度为视窗的 80% */
+    width: 86%; /* 调整宽度为视窗的 80% */
 }
-
 .slideshow-slide {
     display: none;
     position: absolute;
@@ -174,8 +173,12 @@ h1, h2, p {
                 <h2>Observing, documenting, extending infrastructural rituals (Chinatown & lower Lower East Side)</h2>
                 <p>When walking through the city, do we notice the infrastructure that shapes our daily lives? Newsstands were once essential to New York City's streetscape, serving as vital hubs for news and connection. These kiosks provided economic opportunities for vulnerable populations and became beloved fixtures of urban life, symbolizing the city's evolving infrastructure and history.<br>Today, however, newsstands are at risk of disappearing. Owners and employees, who have spent decades in the industry, face limited options for other employment. In 2007, unique, historic newsstands began to be replaced by uniform steel and glass structures from the CEMUSA company of Spain, displacing over 200 private businesses. This change, part of Mayor Michael Bloomberg’s street furniture initiative, sparked debate over the loss of historical elements that define New York's streetscape. Urgent policy changes are needed to help these small businesses survive and preserve their historical significance. The city must balance modernization with preserving its urban history to ensure newsstands remain part of its cultural and economic fabric.</p>
             </article>
+            <div class="navigation-arrows">
+                <button id="prev-project" onclick="navigateProject('prev')">&#10094; </button>
+                <button id="next-project" onclick="navigateProject('next')">Market Play &#10095;</button>
+            </div>
             <footer>
-                <p>Alex_xuzj</p>
+                <p>© 2024 Zijian(Alex) Xu. All rights reserved.</p>
             </footer>
         </div>
     </div>
@@ -196,6 +199,38 @@ h1, h2, p {
                 slides[i].style.display = "none";
             }
             slides[slideIndex-1].style.display = "block";
+        }
+        function navigateProject(direction) {
+            // 定义项目顺序
+            const projects = [
+                "chinatown.html",
+                "Market.html",
+                "LICIBZ.html",
+                "HudsonYards.html",
+                "SunnySideYard.html",
+                "CONNE-CITY.html",
+                "HistoryOfFlowerNYC.html",
+                "CrisisRise.html",
+                "ArtistHouse.html",
+                "WindowsApartment.html",
+                "MemoryMuseum.html",
+                "PlasticRevolution.html"
+            ];
+
+            // 获取当前页面的文件名
+            const currentPage = window.location.pathname.split("/").pop();
+            let currentIndex = projects.indexOf(currentPage);
+
+            if (direction === 'next') {
+                // 跳转到下一个项目
+                currentIndex = (currentIndex + 1) % projects.length;
+            } else if (direction === 'prev') {
+                // 跳转到上一个项目
+                currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+            }
+
+            // 跳转到对应的项目页面
+            window.location.href = projects[currentIndex];
         }
     </script>
 </body>

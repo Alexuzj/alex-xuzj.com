@@ -332,6 +332,28 @@ h4 {
     top: -50%;
 }
 
+.navigation-arrows {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.navigation-arrows button {
+    background-color: #ffffff;
+    color: rgb(86, 86, 86);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.navigation-arrows button:hover {
+    background-color: #555;
+}
+
+
 /* 适配不同屏幕大小 */
 @media (max-width: 768px) {
     .sidebar {
