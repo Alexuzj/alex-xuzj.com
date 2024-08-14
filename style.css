@@ -379,29 +379,42 @@ h4 {
 }
 
 @media (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* 纵向排列内容 */
+        align-items: center;
+    }
+
     .sidebar {
-        width: 15%;
+        width: 100%; /* 让侧边栏占据全宽度 */
+        margin-bottom: -150px; /* 与主要内容保持一定距离 */
     }
 
     .main-content {
-        width: 50%;
+        width: 100%; /* 主要内容占据全宽度 */
+        margin-top: 20px; /* 添加顶部外边距 */
     }
 
     .project-list ul li {
-        font-size: 12px;
+        font-size: 14px; /* 统一字体大小，避免突兀变化 */
     }
 
     .project-list ul li:hover {
-        font-size: 16px;
+        font-size: 14px; /* 保持悬停时字体大小不变 */
     }
 
     .slideshow-container {
-        grid-template-columns: 1fr;
-        width: 100%; /* 在小屏幕上使用全宽 */
+        width: 90%; /* 让幻灯片容器占据全屏 */
+        margin: 0 auto; /* 居中显示 */
+        height: -100px; /* 让高度根据内容自适应 */
+        margin-bottom: -200px;
+
     }
 
-    .container {
-        flex-direction: column;
+    .center-content {
+        width: 100%; /* 在小屏幕上全宽显示主要内容 */
+        padding: 10px; /* 添加内边距以提高可读性 */
+        text-align: center; /* 居中对齐文本 */
     }
 }
 
