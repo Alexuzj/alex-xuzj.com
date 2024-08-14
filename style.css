@@ -387,7 +387,7 @@ h4 {
 
     .sidebar {
         width: 100%; /* 让侧边栏占据全宽度 */
-        margin-bottom: -150px; /* 与主要内容保持一定距离 */
+        margin-bottom: -50px; /* 与主要内容保持一定距离 */
     }
 
     .main-content {
@@ -407,7 +407,7 @@ h4 {
         width: 90%; /* 让幻灯片容器占据全屏 */
         margin: 0 auto; /* 居中显示 */
         height: -100px; /* 让高度根据内容自适应 */
-        margin-bottom: -200px;
+        margin-bottom: -230px;
 
     }
 
